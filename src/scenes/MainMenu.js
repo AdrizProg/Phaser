@@ -1,6 +1,5 @@
 import { Scene } from 'phaser';
 import consulta from '../components/callApi';
-import { array } from '../components/callApi';
 
 export class MainMenu extends Scene
 {
@@ -38,7 +37,6 @@ export class MainMenu extends Scene
         });
 
         consulta();
-        console.log(array);
 
     }
 }
