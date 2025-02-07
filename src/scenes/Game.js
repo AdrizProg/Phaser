@@ -1,4 +1,5 @@
 import { Scene } from 'phaser';
+import errorControlado from '../components/errorControlado';
 
 export class Game extends Scene {
     constructor() {
@@ -21,6 +22,8 @@ export class Game extends Scene {
             this.scene.start('GameOver');
 
         });
+
+        errorControlado();
 
         // platforms = this.physics.add.staticGroup();
 

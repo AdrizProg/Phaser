@@ -1,5 +1,6 @@
 import { Scene } from 'phaser';
 import consulta from '../components/callApi';
+import { Bugfender } from '@bugfender/sdk';
 
 export class MainMenu extends Scene
 {
@@ -38,5 +39,17 @@ export class MainMenu extends Scene
 
         consulta();
 
+        Bugfender.init({
+            appKey: 'TtLs7bzyn6Opnjbcp8nUqkziFWNQegLa',
+            // overrideConsoleMethods: true,
+            // printToConsole: true,
+            // registerErrorHandler: true,
+            // logBrowserEvents: true,
+            // logUIEvents: true,
+            // version: '',
+            // build: '',
+        });
+
+        Bugfender.log('Pagina de inicio "MAinMenu.js"')
     }
 }
